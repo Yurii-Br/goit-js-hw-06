@@ -13,7 +13,7 @@ const images = [
   },
 ];
 
-const LIST = document.querySelector(".gallery");
+const list = document.querySelector(".gallery");
 const html = images.map((el) => `<li><img src="${el.url}" alt="${el.alt}" width = "200"> </li>`).join('');
 
-LIST.insertAdjacentHTML("afterbegin",html);
+list.insertAdjacentHTML("afterbegin",html);

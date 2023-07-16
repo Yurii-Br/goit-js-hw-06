@@ -9,4 +9,14 @@ const ingredients = [
 ];
 
 const list = document.getElementById('ingredients');
-list.innerHTML = ingredients.map(item => `<li class="item">${item}</li>`).join('');
+const fragment = document.createDocumentFragment()
+
+const newElement = ingredients.forEach(item => {
+  const newElement = document.createElement('li');
+  newElement.classList.add('item');
+  newElement.textContent = item;
+  fragment.appendChild(newElement);
+})
+list.appendChild(fragment);
+
+

@@ -1,12 +1,13 @@
-const IN = document.getElementById('name-input');
-const OUT = document.getElementById('name-output');
+'use strict'
+const input = document.getElementById('name-input');
+const output = document.getElementById('name-output');
 
-IN.addEventListener('input', (event) =>  {
-    const inputValue = event.target.value;
+input.addEventListener('input', (event) =>  {
+    const inputValue = event.target.value.trim();
     if (inputValue === '') {
-        OUT.textContent = 'Anonymous';
+        output.textContent = 'Anonymous';
     }
     else {
-        OUT.textContent = inputValue;
+        output.textContent = inputValue;
     }
 });

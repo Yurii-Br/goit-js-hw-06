@@ -1,17 +1,17 @@
 'use strict'
-const IN = document.getElementById('validation-input');
+const input = document.getElementById('validation-input');
 
-IN.addEventListener('blur', () => {
-   const inpVal = parseInt(IN.dataset.length);
-   const OWN_VAL = IN.value.length;
+input.addEventListener('blur', () => {
+   const inputVal = parseInt(input.dataset.length);
+   const length = input.value.trim().length;
 
-   if (inpVal === parseInt(OWN_VAL)) {
-    IN.classList.add('valid');
-    IN.classList.remove('invalid');
+   if (inputVal === parseInt(length)) {
+    input.classList.add('valid');
+    input.classList.remove('invalid');
   } 
   else {
-    IN.classList.remove('valid');
-    IN.classList.add('invalid');
+    input.classList.remove('valid');
+    input.classList.add('invalid');
   }
 
 });

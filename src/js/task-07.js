@@ -1,5 +1,5 @@
-const RANGE = document.getElementById('font-size-control');
-const TXT = document.getElementById('text');
+const range = document.getElementById('font-size-control');
+const txt = document.getElementById('text');
 
-RANGE.value = RANGE.min;
-RANGE.addEventListener('input', () => TXT.style.fontSize = RANGE.value + 'px');
+range.value = range.min;
+range.addEventListener('input', () => txt.style.fontSize = range.value + 'px');
