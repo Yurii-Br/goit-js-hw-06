@@ -1,4 +1,6 @@
-'use strict'
+
+'use strict';
+
 const ingredients = [
   'Potatoes',
   'Mushrooms',
@@ -9,14 +11,12 @@ const ingredients = [
 ];
 
 const list = document.getElementById('ingredients');
-const fragment = document.createDocumentFragment()
 
-const newElement = ingredients.forEach(item => {
+const newElements = ingredients.map(item => {
   const newElement = document.createElement('li');
   newElement.classList.add('item');
   newElement.textContent = item;
-  fragment.appendChild(newElement);
-})
-list.appendChild(fragment);
+  return newElement;
+});
 
-
+list.append(...newElements);

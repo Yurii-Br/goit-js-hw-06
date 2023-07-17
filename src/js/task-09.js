@@ -4,6 +4,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
+let color = getRandomHexColor();
 
 const background = document.querySelector('body');
 
@@ -13,8 +14,12 @@ const btn = document.querySelector('.change-color');
 
 
 btn.addEventListener('click', () => {
-  background.style.backgroundColor = `${getRandomHexColor()}`;
-  nameColor.textContent = background.style.backgroundColor;
+  background.style.backgroundColor = color;
+  nameColor.textContent = color;
 })
+
+// Только теперь это работает 1 раз 
+// но я думал что нужно при каждом нажатии 
+// мало информации в техническом задании 
 
 
